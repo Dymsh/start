@@ -1,0 +1,82 @@
+@mixin container () {
+  /*padding: 0 9%;*/
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media #{$tablet-width} {
+    /*padding: 0 5%;*/
+    padding: 0px;
+    width: 668px;
+    margin: 0 auto;
+  }
+  @media #{$desktop-width} {
+    width: 1050px;
+    /*max-width: 1050px; */
+  }
+}
+@mixin visualy-hidden () {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@mixin input () {
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    border: none;
+    font: 17px/18px 'opensans';
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+    &:focus {
+      outline: none;
+    }
+}
+@mixin line-decoration () {
+  &::before {
+    content: "";
+    display: block;
+    position: relative;
+    margin-top: 8px;
+    height: 7px;
+    background:  url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    @media #{$tablet-width} {
+      height: 17px;
+      margin-top: 0px;
+    }
+    @media #{$desktop-width} {
+      height: 23px;
+      margin-top: -7px;
+    }
+  }
+}
+@mixin fill-decoration () {
+  &::after {
+    content: "";
+    display: block;
+    position: relative;
+    margin-top: -12px;
+    bottom: -1px;
+    height: 24px;
+    background:  url("../img/bg-zigzag-fill.svg");
+    @media #{$desktop-width} {
+      height: 34px;
+      margin-top: -19px;
+    }
+  }
+}
+@mixin clearfix () {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

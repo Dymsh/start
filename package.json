@@ -1,0 +1,43 @@
+{
+  "name": "mishka",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Макет «Мишка»",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "0.1.x",
+    "autoprefixer": "6.7.x",
+    "browser-sync": "2.18.8",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "gulp-csso": "^3.0.0",
+    "gulp-delete-directory-files": "0.0.2",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "install": "^0.8.8",
+    "npm": "^4.4.4"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "gulp build",
+    "start": "gulp server"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "6.10"
+  }
+}
